@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <div class="slideshow">
+            <link rel="shortcut icon" href="image.png" type="image/x-icon">
+    <title>Cabir.co</title>
+    <style>
+        img{
+            width: 400px;
+        }
+        body{
+            background: url(backgrundImage.webp);
+            background-size: cover;
+        }
+        .slideshow {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+        }
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .active {
+            display: block;
+        }
+        .slides{
+            margin: 0px;
+            background-color: rgb(0, 68, 255);
+            border-radius: 30px;
+            border: 1px solid grey;
+            
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">Learn last transfers with Cabir.co</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+      </nav>
+    
+    <div class="slides active">
+        <img src="osimhen.jpeg" alt="Image 1">
+    </div>
+    <div class="slides">
+        <img src="kvars.jpg" alt="Image 2">
+    </div>
+    <div class="slides">
+        <img src="qara.jpg" alt="Image 3">
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        let index = 0;
+        const slides = document.getElementsByClassName('slides');
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+            }
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+            setTimeout(showSlides, 2000);
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>
